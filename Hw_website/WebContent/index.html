@@ -3,33 +3,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=BIG5">
 <title>Insert title here</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>
-		Homework Initializr <small>by Harry Yen</small>
-	</h1>
-	<form id="form" action="" method="get" role="form">
-		<div>
-			<label for="type">Generate a </label> <select class="form-control"
-				name="language" id="language">
-				<option value="Java" selected>Advanced Java</option>
-				<option value="Kotlin">Kotlin</option>
-				<option value="XML">XML</option>
-			</select> <label>Programming Homework</label> <label>with No.</label> <select
-				class="form-control" name="homeworkID" id="homeworkID">
-				<option value="hw1" selected>hw1</option>
-				<option value="hw2">hw2</option>
-				<option value="hw3">hw3</option>
-			</select> <label>DeadLine：</label> <label id="deadline"></label>
-		</div>
-		</br>
-		<div>
-			<label>Your student ID ?</label> <input id="studentID"
-				name="studentID" class="form-control">
-		</div>
+	<div class="container">
+		<h1>Homework Initializr</h1>
 
+		<form id="form" action="" method="get" role="form">
+			<div>
+				<label for="type">Generate a Programming Homework：</label> <select
+					class="form-control" name="language" id="language">
+					<option value="Java" selected>Advanced Java</option>
+					<option value="ASP">ASP</option>
+					<option value="XML">XML</option>
+				</select><label>with No.</label> <select class="form-control"
+					name="homeworkID" id="homeworkID">
+					<option value="hw1" selected>hw1</option>
+					<option value="hw2">hw2</option>
+					<option value="hw3">hw3</option>
+				</select>
+				<script>
+					var today = new Date();
+					var currentTime = (today.getMonth() + 1) + '月'
+							+ today.getDate() + '日';
+					document.getElementById("time").innerHTML = currentTime;
+				</script>
+				<label>Time：</label><label id="time"></label> <label>,DeadLine：</label><label
+					id="deadline"></label> <label>,Count down：</label><label id="rtime"></label>
+			</div>
+			</br>
+			<div>
+				<label>Your student ID ?</label> <input id="studentID"
+					name="studentID" class="form-control">
+			</div>
+			<div>
+				<label>Your e-mail address ?</label> <input id="address"
+					name="address" class="form-control">
+			</div>
+			<p class="bg-danger">Don't copy and paste others homework, that
+				is cheating, you have to do hw by yourself !!</p>
+			</br>
+			<button type="submit" name="generate" class="btn btn-lg btn-primary">Generate
+				!!</button>
+		</form>
 
+	</div>
 
-	</form>
 </body>
 </html>
