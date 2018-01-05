@@ -13,7 +13,9 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="JSLINQ.js"></script>
 </head>
+
 <body>
 	<div class="container">
 		<h1>Homework Initializr</h1>
@@ -22,23 +24,25 @@
 			<div>
 				<label for="type">Generate a Programming Homework¡G</label> <select
 					class="form-control" name="language" id="language">
-					<option value="Java" selected>Advanced Java</option>
-					<option value="ASP">ASP</option>
-					<option value="XML">XML</option>
+					<option value="0" selected>choose...</option>
+					<option value="1">Advanced Java</option>
+					<option value="2">ASP</option>
+					<option value="3">XML</option>
 				</select><label>with No.</label> <select class="form-control"
-					name="homeworkID" id="homeworkID">
-					<option value="hw1" selected>hw1</option>
-					<option value="hw2">hw2</option>
-					<option value="hw3">hw3</option>
+					name="homeworkID" id="hwID">
 				</select>
+
+				<script type="text/javascript" src="chose.js"></script>
+
+				<label>Time¡G</label><label id="time"></label> <label>,
+					DeadLine¡G</label><label id="deadline"></label> <label>, Count down¡G</label><label
+					id="rtime"></label>
 				<script>
 					var today = new Date();
 					var currentTime = (today.getMonth() + 1) + '¤ë'
 							+ today.getDate() + '¤é';
 					document.getElementById("time").innerHTML = currentTime;
 				</script>
-				<label>Time¡G</label><label id="time"></label> <label>,DeadLine¡G</label><label
-					id="deadline"></label> <label>,Count down¡G</label><label id="rtime"></label>
 			</div>
 			</br>
 			<div>
